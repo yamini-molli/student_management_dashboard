@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduAdmin - Login</title>
+
+    <!-- IMPORTANT: Login CSS -->
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="login-page">
+
+        <div class="login-card">
+
+            <div class="logo">
+                Edu<span>Admin</span>
+            </div>
+
+            <h1>Welcome Back</h1>
+
+            <p class="subtitle">
+                Sign in to your student management dashboard
+            </p>
+
+
+            <form id="loginForm">
+
+                <div class="form-group">
+
+                    <label for="username">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Enter your username"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            onclick="togglePassword()"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="options">
+
+                    <label>
+                        <input type="checkbox">
+                        Remember me
+                    </label>
+
+                    <a href="#">
+                        Forgot password?
+                    </a>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="login-button"
+                >
+                    Login
+                </button>
+
+
+                <p id="message"></p>
+
+            </form>
+
+
+            <div class="footer">
+                Student Management System
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        // Show / Hide Password
+
+        function togglePassword() {
+
+            const password =
+                document.getElementById("password");
+
+            if (password.type === "password") {
+
+                password.type = "text";
+
+            } else {
+
+                password.type = "password";
+
+            }
+        }
+
+
+        // Login
+
+        document
+            .getElementById("loginForm")
+            .addEventListener("submit", function(event) {
+ 
+                event.preventDefault();
+
+                const username =
+                    document.getElementById("username").value;
+
+                const password =
+                    document.getElementById("password").value;
+
+                const message =
+                    document.getElementById("message");
+
+
+                // Demo credentials
+                if (
+                    username === "yamini-molli" &&
+                    password === "yamini2506"
+                ) {
+
+                    message.style.color = "#16a34a";
+
+                    message.textContent =
+                        "Login successful!";
+
+
+                    setTimeout(function() {
+
+                        window.location.href =
+                            "index.html";
+
+                    }, 700);
+
+                } else {
+
+                    message.style.color = "#dc2626";
+
+                    message.textContent =
+                        "Invalid username or password.";
+
+                }
+
+            });
+
+    </script>
+
+</body>
+
+</html>

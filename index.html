@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BEHARA Admin - Student Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">E</div>
+            <div>
+                <strong>BEHARA<span>Admin</span></strong>
+                <small>Management System</small>
+            </div>
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-title">MAIN</p>
+
+            <button class="nav-item active" data-page="dashboard">
+                <span>⌂</span>
+                Dashboard
+            </button>
+
+            <button class="nav-item" data-page="students">
+                <span>♟</span>
+                Students
+            </button>
+
+            <button class="nav-item" data-page="teachers">
+                <span>♙</span>
+                Teachers
+            </button>
+
+            <button class="nav-item" data-page="courses">
+                <span>▣</span>
+                Courses
+            </button>
+
+
+            <p class="nav-title">ACADEMIC</p>
+
+            <button class="nav-item" data-page="attendance">
+                <span>✓</span>
+                Attendance
+            </button>
+
+            <button class="nav-item" data-page="exams">
+                <span>▤</span>
+                Exams
+            </button>
+
+
+            <p class="nav-title">FINANCE</p>
+
+            <button class="nav-item" data-page="fees">
+                <span>₹</span>
+                Fees
+            </button>
+
+            <button class="nav-item" data-page="reports">
+                <span>▥</span>
+                Reports
+            </button>
+
+
+            <p class="nav-title">SYSTEM</p>
+
+            <button class="nav-item" data-page="settings">
+                <span>⚙</span>
+                Settings
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="school-card">
+                <div class="school-logo">🎓</div>
+
+                <div>
+                    <strong>BEHARA Admin</strong>
+                    <small>College Portal</small>
+                </div>
+            </div>
+
+            <button class="logout-btn" id="logoutBtn">
+                ⇥ Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <button class="mobile-menu" id="mobileMenu">
+                ☰
+            </button>
+
+            <div class="top-title">
+
+                <h1 id="pageTitle">
+                    Dashboard
+                </h1>
+
+                <p id="pageSubtitle">
+                    Overview of your college management system
+                </p>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <button
+                    class="notification-btn"
+                    id="notificationBtn"
+                >
+                    🔔
+                    <span>3</span>
+                </button>
+
+
+                <div class="profile-menu">
+
+                    <div class="avatar">
+                        A
+                    </div>
+
+                    <div>
+                        <strong>Admin User</strong>
+                        <small>Administrator</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PAGE CONTENT -->
+
+        <div class="page-container" id="pageContainer"></div>
+
+
+        <!-- FOOTER -->
+
+        <footer class="footer">
+            © 2026 BEHARA Admin • Student Management System
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- MODAL -->
+
+<div class="modal-overlay" id="modalOverlay">
+
+    <div class="modal" id="modal">
+
+        <button class="modal-close" id="modalClose">
+            ×
+        </button>
+
+        <div id="modalContent"></div>
+
+    </div>
+
+</div>
+
+
+<!-- TOAST -->
+
+<div id="toast"></div> 
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
